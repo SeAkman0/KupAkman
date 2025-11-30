@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kupa Üzerine Resim Yerleştirme</title>
+   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row; /* Yan yana sırala */
+            align-items: flex-start;
+        }
+
+        .cup-section {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .cup-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .cup-image {
+            width: 600px; /* Küçültüldü */
+            height: auto;
+        }
+
+        .user-image {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .urunAd {
+            display: flex;
+            justify-content: center; /* Yatay olarak ortala */
+            border: 2px solid;
+            margin-bottom: 20px; /* Boşluk ekleyelim */
+            width: 100%; /* Tam genişlik */
+            box-sizing: border-box; /* Kenarlıklar dahil genişlik hesaplansın */
+        }
+    </style>
+</head>
+<body>
+    
+
+<div class="container">
+
+    <div style="position: absolute; top: 10px; left: 10px;">
+        <a href="index.php">Geri Dön</a>
+    </div>
+
+   
+
+    <!-- Sol Kupa -->
+    <div class="cup-section">
+        <div class="cup-container" id="cup-container-left">
+            <h3>KUPA SOL TARAF</h3>
+            
+            <img src="img/bosKupaSol.png" alt="Kupa" class="cup-image">
+            
+        </div>
+        <br>
+        <input type="file" id="image-input-left" accept="image/*">
+        <div class="buttons">
+            <button class="up-button" data-side="left">↑</button>
+        </div>
+        <div class="buttons">
+            <button class="left-button" data-side="left">←</button>
+            <button class="down-button" data-side="left">↓</button>
+            <button class="right-button" data-side="left">→</button>
+        </div>
+        <div class="buttons">
+            <button class="rotate-left-button" data-side="left">↺</button>
+            <button class="increase-size-button" data-side="left">Büyüt</button>
+            <button class="decrease-size-button" data-side="left">Küçült</button>
+            <button class="rotate-right-button" data-side="left">↻</button>
+        </div>
+    </div>
+
+    <!-- Sağ Kupa -->
+    <div class="cup-section">
+        <div class="cup-container" id="cup-container-right">
+            <h3>KUPA SAG TARAF</h3>
+            <img src="img/bosKupaSag.png" alt="Kupa" class="cup-image">
+        
+        <br>
+        <input type="file" id="image-input-right" accept="image/*">
+        <div class="buttons">
+            <button class="up-button" data-side="right">↑</button>
+        </div>
+        
+        <div class="buttons">
+            <button class="left-button" data-side="right">←</button>
+            <button class="down-button" data-side="right">↓</button>
+            <button class="right-button" data-side="right">→</button>
+        </div>
+        <div class="buttons">
+            <button class="rotate-left-button" data-side="right">↺</button>
+            <button class="increase-size-button" data-side="right">Büyüt</button>
+            <button class="decrease-size-button" data-side="right">Küçült</button>
+            <button class="rotate-right-button" data-side="right">↻</button>
+        </div>
+
+        
+    </div>
+   
+    
+</div>
+
+<script src="script.js"></script>
+</body>
+
+    
+</html>
+
+
+
+
